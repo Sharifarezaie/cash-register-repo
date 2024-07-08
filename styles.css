@@ -5,13 +5,13 @@
 }
 
 :root {
---light-gray: #dfdfe2;
+  --light-gray: #dfdfe2;
   --dark-blue: #701fcd;
 }
 
 body {
-background-color: var(--dark-blue);
-color: var(--light-gray);
+  background-color: var(--dark-blue);
+  color: var(--light-gray);
 }
 
 main {
