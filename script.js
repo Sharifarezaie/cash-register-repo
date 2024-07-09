@@ -18,9 +18,9 @@ const priceScreen = document.getElementById('price-screen');
 const cashDrawerDisplay = document.getElementById('cash-drawer-display');
 
 const formatResults = (status, change) => {
-  displayChangeDue.innerHTML = <p>Status: ${status}</p>;
+  displayChangeDue.innerHTML = `<p>Status: ${status}</p>`;
   change.map((money) => {
-    displayChangeDue.innerHTML += <p>${money[0]}: $${money[1]}</p>;
+    displayChangeDue.innerHTML += `<p>${money[0]}: $${money[1]}</p>`;
     return null;
   });
 };
@@ -49,7 +49,7 @@ const updateUI = (change) => {
   priceScreen.textContent = `Total: $${price}`;
   cashDrawerDisplay.innerHTML = `<p><strong>Change in drawer:</strong></p>
     ${cid
-    .map((money) => <p>${currencyNameMap[money[0]]}: $${money[1]}</p>)
+    .map((money) => `<p>${currencyNameMap[money[0]]}: $${money[1]}</p>`)
     .join('')}  
   `;
 };
@@ -87,7 +87,7 @@ const checkCashRegister = () => {
     result.status = 'CLOSED';
   }
 
-  for (let i = 0; i <= reversedCid.length; i + 1) {
+  for (let i = 0; i <= reversedCid.length; i += 1) {
     if (changeDue >= denominations[i] && changeDue > 0) {
       let count = 0;
       let total = reversedCid[i][1];
